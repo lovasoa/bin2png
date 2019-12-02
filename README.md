@@ -1,6 +1,12 @@
 # bin2png
 Embed binary data inside an HTML file in an efficient way.
 
+Sometimes, your script requires some binary data that is available at compile time,
+and that you would like to inline in order to reduce the number of network roundtrips.
+You could inline this data directly inside your script, as a `new Uint8Array([...])`,
+but this would greatly increase your script's parse time, and the amount of data transferred.
+Here, we propose a better alternative: package the binary data as an inline PNG image. The browser can load the inline image without blocking the JavaScript code, and you benefit from the deflate compression provided by the PNG format.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7f568d67-7de0-45c8-b308-f6f84261f884/deploy-status)](https://app.netlify.com/sites/bin2png-example/deploys)
 
 ## How to use
