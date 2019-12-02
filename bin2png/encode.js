@@ -2,10 +2,13 @@ var PNG = require('pngjs').PNG;
 
 /**
  * Takes binary data in the form of an UInt8Array
- * and returns binary data representing a valid PNG file containing the original data
+ * and returns binary data representing a valid PNG file containing the original data.
+ * The data can then be decoded with png2bin.
+ * 
  * @param {Uint8Array} data 
+ * @returns {Uint8Array} pngData
  */
-async function encode(data) {
+async function bin2png(data) {
     var width = 512;
     var height = Math.ceil((data.length + 4) / 3 / width);
     var png = new PNG({
@@ -35,4 +38,4 @@ function streamToBuffer(stream) {
     });
 }
 
-module.exports = { encode }
+if (typeof module !== "undefined") module.exports = { encode: bin2png }

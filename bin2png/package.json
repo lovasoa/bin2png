@@ -2,7 +2,7 @@
   "name": "bin2png",
   "version": "0.1.0",
   "description": "Convert binary data to a png in order to embed it efficiently.",
-  "main": "index.js",
+  "main": "encode.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
