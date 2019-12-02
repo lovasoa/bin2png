@@ -4,7 +4,7 @@ This is an example app that demonstrates the use of bin2png. You can see it runn
 
 ### Build
 
-The puild is handled by [parcel](https://parceljs.org/).
+The build is handled by [parcel](https://parceljs.org/).
 
 At build time, [bin2png](https://www.npmjs.com/package/bin2png) is used to convert a `.wasm` file to a png image.
 (See [posthtml.config.js](https://github.com/lovasoa/bin2png/blob/master/example/posthtml.config.js))
