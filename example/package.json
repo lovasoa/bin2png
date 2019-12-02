@@ -10,7 +10,8 @@
   "devDependencies": {
     "bin2png": "file:../bin2png",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-inliner": "^1.0.10"
+    "parcel-plugin-inliner": "^1.0.10",
+    "posthtml": "^0.12.0"
   },
   "scripts": {
     "dev": "parcel index.html",
@@ -27,6 +28,6 @@
   },
   "homepage": "https://github.com/lovasoa/bin2png#readme",
   "browserslist": [
-    "last 1 Chrome versions"
+    ">5%"
   ]
 }
