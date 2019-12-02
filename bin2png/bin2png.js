@@ -2,7 +2,7 @@ var fs = require('fs');
 var encode = require('./encode.js');
 
 if (process.argv.length < 4) {
-    process.stderr.write("Usage: bin2png binary-file png-file");
+    process.stderr.write("Usage: bin2png binary-file png-file\n");
     process.exit(1);
 }
 

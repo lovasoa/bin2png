@@ -1,6 +1,6 @@
 {
   "name": "bin2png",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert binary data to a png in order to embed it efficiently.",
   "main": "encode.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "pngjs": "^3.4.0"
   },
   "bin": {
-    "bin2png": "node bin2png.js"
+    "bin2png": "bin2png.sh"
   }
 }
