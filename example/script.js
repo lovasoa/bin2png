@@ -1,5 +1,5 @@
 import { initSqlJs } from "sql.js";
-import { png2bin } from 'png2bin';
+import { png2bin } from "png2bin";
 
 async function main() {
     console.log(performance.now(), "Start loading");

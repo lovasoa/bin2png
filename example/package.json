@@ -4,10 +4,13 @@
   "description": "Example usage of bin2png",
   "main": "script.js",
   "dependencies": {
+    "png2bin": "file:../png2bin",
     "sql.js": "^1.0.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "bin2png": "file:../bin2png",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-inliner": "^1.0.10"
   },
   "scripts": {
     "dev": "parcel index.html",
