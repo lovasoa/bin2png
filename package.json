@@ -1,0 +1,33 @@
+{
+  "name": "bin2png",
+  "version": "0.1.0",
+  "description": "Convert binary data to a png in order to embed it efficiently.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lovasoa/bin2png.git"
+  },
+  "keywords": [
+    "html",
+    "embed",
+    "binary",
+    "pack",
+    "asset"
+  ],
+  "author": "lovasoa",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lovasoa/bin2png/issues"
+  },
+  "homepage": "https://github.com/lovasoa/bin2png#readme",
+  "dependencies": {
+    "pngjs": "^3.4.0"
+  },
+  "bin": {
+    "bin2png": "node bin2png.js"
+  }
+}
