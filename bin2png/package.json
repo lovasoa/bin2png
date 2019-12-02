@@ -5,7 +5,7 @@
   "main": "encode.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node bin2png.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,6 @@
     "pngjs": "^3.4.0"
   },
   "bin": {
-    "bin2png": "bin2png.sh"
+    "bin2png": "bin2png-cli.js"
   }
 }

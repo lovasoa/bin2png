@@ -1,20 +1,27 @@
 var fs = require('fs');
-var encode = require('./encode.js');
+var bin2png = require('./encode.js').bin2png;
 
-if (process.argv.length < 4) {
-    process.stderr.write("Usage: bin2png binary-file png-file\n");
-    process.exit(1);
-}
+async function main(argv) {
+    if (argv.length < 4) {
+        process.stderr.write("Usage: bin2png binary-file png-file\n");
+        process.exit(1);
+    }
 
-var binFileName = process.argv[2];
-var pngFileName = process.argv[3];
+    var binFileName = argv[2];
+    var pngFileName = argv[3];
 
-console.log(`Converting ${binFileName} to ${pngFileName}`);
+    console.log(`Converting ${binFileName} to ${pngFileName}`);
 
-var binFile = fs.readFileSync(binFileName);
+    var binFile = fs.readFileSync(binFileName);
 
-encode.encode(binFile).then(encoded => {
+    var encoded = await bin2png(binFile);
     fs.writeFileSync(pngFileName, encoded);
     var ratio = (encoded.length - binFile.length) / binFile.length;
     console.log(`Success. File size difference: ${(100 * ratio).toFixed(0)}%`);
-});
+}
+
+module.exports = { main, bin2png };
+
+if (require.main === module) {
+    main(process.argv);
+}

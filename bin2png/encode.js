@@ -38,4 +38,4 @@ function streamToBuffer(stream) {
     });
 }
 
-if (typeof module !== "undefined") module.exports = { encode: bin2png }
+if (typeof module !== "undefined") module.exports = { bin2png }
