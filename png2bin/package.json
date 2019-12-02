@@ -1,6 +1,6 @@
 {
   "name": "png2bin",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Decode data that has been encoded with bin2png",
   "main": "decode.js",
   "scripts": {
