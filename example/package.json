@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/lovasoa/bin2png/issues"
   },
-  "homepage": "https://github.com/lovasoa/bin2png#readme"
+  "homepage": "https://github.com/lovasoa/bin2png#readme",
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
 }

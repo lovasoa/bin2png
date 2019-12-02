@@ -1,5 +1,8 @@
-import { initSqlJs } from "sql.js";
 import { png2bin } from "png2bin";
+import initSqlJs from "sql.js";
+
+console.log(performance.now(), "Start script execution");
+console.log(initSqlJs);
 
 async function main() {
     console.log(performance.now(), "Start loading");
@@ -12,8 +15,9 @@ async function main() {
         locateFile: f => fileBlobs[fileNames.indexOf(f)] || f
     });
     console.log(performance.now(), "Loaded SQLite");
-    console.log(new SQL.Database().prepare("select sqlite_version()").getAsObject({}));
+    var result = new SQL.Database().prepare("select sqlite_version()").getAsObject({});
     console.log(performance.now(), "Executed first query");
+    document.getElementById("result").textContent = JSON.stringify(result, 0, "\t");
 }
 
 window.addEventListener('DOMContentLoaded', main);
