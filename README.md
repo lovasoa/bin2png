@@ -1,6 +1,8 @@
 # bin2png
 Embed binary data inside an HTML file in an efficient way.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7f568d67-7de0-45c8-b308-f6f84261f884/deploy-status)](https://app.netlify.com/sites/bin2png-example/deploys)
+
 ## How to use
 
 ### Step 1: convert your binary files to png
