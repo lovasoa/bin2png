@@ -1,0 +1,26 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "Example usage of bin2png",
+  "main": "script.js",
+  "dependencies": {
+    "sql.js": "^1.0.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lovasoa/bin2png.git"
+  },
+  "author": "lovasoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lovasoa/bin2png/issues"
+  },
+  "homepage": "https://github.com/lovasoa/bin2png#readme"
+}
