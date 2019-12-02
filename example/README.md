@@ -1,6 +1,6 @@
 # bin2png integration example
 
-This is an example app that demonstrates the use of bin2png.
+This is an example app that demonstrates the use of bin2png. You can see it running at https://bin2png-example.netlify.com
 
 ### Build
 
