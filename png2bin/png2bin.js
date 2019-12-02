@@ -1,4 +1,4 @@
-async function loadFile(img) {
+async function png2bin(img) {
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
     canvas.height = img.height;
@@ -15,4 +15,4 @@ async function loadFile(img) {
     return data.slice(0, length);
 }
 
-if (typeof module !== "undefined") module.exports = { loadFile }
+if (typeof module !== "undefined") module.exports = { png2bin }
