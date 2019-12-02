@@ -1,0 +1,28 @@
+{
+  "name": "png2bin",
+  "version": "0.1.0",
+  "description": "Decode data that has been encoded with bin2png",
+  "main": "decode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lovasoa/bin2png.git"
+  },
+  "keywords": [
+    "png",
+    "bin",
+    "decode",
+    "browser",
+    "embed",
+    "asset",
+    "inline"
+  ],
+  "author": "lovasoa",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lovasoa/bin2png/issues"
+  },
+  "homepage": "https://github.com/lovasoa/bin2png#readme"
+}
