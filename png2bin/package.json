@@ -4,7 +4,7 @@
   "description": "Decode data that has been encoded with bin2png",
   "main": "png2bin.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/lovasoa/bin2png/issues"
   },
-  "homepage": "https://github.com/lovasoa/bin2png#readme"
+  "homepage": "https://github.com/lovasoa/bin2png#readme",
+  "devDependencies": {
+    "canvas": "^2.6.0",
+    "jsdom": "^15.2.1"
+  }
 }

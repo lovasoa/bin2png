@@ -9,19 +9,19 @@ var PNG = require('pngjs').PNG;
  * @returns {Uint8Array} pngData
  */
 async function bin2png(data) {
-    var width = 512;
-    var height = Math.ceil((data.length + 4) / 3 / width);
-    var png = new PNG({
+    const width = 512;
+    const height = Math.ceil((data.length + 4) / 3 / width);
+    const png = new PNG({
         width: width,
         height: height,
         colorType: 2, // colortype 2 is RGB
         bitDepth: 8,
         bgColor: { red: 0xff, green: 0xff, blue: 0xff },
     });
-    var surplus = (png.data.length / 4 | 0) * 3 - data.length;
-    var inBuf = Buffer.from(data.buffer);
-    for (var i = 0; i < inBuf.length; i += 3) {
-        var j = (i / 3 | 0) * 4;
+    const surplus = (png.data.length / 4 | 0) * 3 - data.length;
+    const inBuf = Buffer.from(data.buffer, data.byteOffset, data.byteLength);
+    for (let i = 0; i < inBuf.length; i += 3) {
+        let j = (i / 3 | 0) * 4;
         inBuf.copy(png.data, j, i, i + 3); // RGB
         png.data[j + 3] = 0xff;
     }

@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs = require('fs').promises;
 var bin2png = require('./encode.js').bin2png;
 
 async function main(argv) {
@@ -12,10 +12,10 @@ async function main(argv) {
 
     console.log(`Converting ${binFileName} to ${pngFileName}`);
 
-    var binFile = fs.readFileSync(binFileName);
+    var binFile = await fs.readFile(binFileName);
 
     var encoded = await bin2png(binFile);
-    fs.writeFileSync(pngFileName, encoded);
+    await fs.writeFile(pngFileName, encoded);
     var ratio = (encoded.length - binFile.length) / binFile.length;
     console.log(`Success. File size difference: ${(100 * ratio).toFixed(0)}%`);
 }

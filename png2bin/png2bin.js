@@ -5,6 +5,7 @@
  * @returns {Uint8Array} decoded file
  */
 async function png2bin(img) {
+    var document = getDocument(img);
     var canvas = document.createElement("canvas");
     var img = await imgLoad(img);
     canvas.width = img.width;
@@ -28,6 +29,16 @@ function imgLoad(img) {
         img.onerror = reject;
         img.onload = accept.bind(null, img);
     });
+}
+
+/**
+ * Returns the document element a node belongs to
+ * @param {HTMLElement} domNode 
+ * @returns {Document}
+ */
+function getDocument(domNode) {
+    if (domNode.getRootNode) return domNode.getRootNode();
+    else return window.document;
 }
 
 if (typeof module !== "undefined") module.exports = { png2bin }
