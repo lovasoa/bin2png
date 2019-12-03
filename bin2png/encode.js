@@ -6,7 +6,7 @@ var PNG = require('pngjs').PNG;
  * The data can then be decoded with png2bin.
  * 
  * @param {Uint8Array} data 
- * @returns {Uint8Array} pngData
+ * @returns {Promise<Uint8Array>} pngData
  */
 async function bin2png(data) {
     const width = 512;
