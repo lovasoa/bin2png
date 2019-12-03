@@ -5,8 +5,7 @@ For more information, please look at [**the project page**](https://github.com/l
 ## Usage
 
 You first need to encode a file with [bin2png](https://www.npmjs.com/package/bin2png).
-Then, you can inline it as a [base64 data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs),
-and inline it in an HTML file like this:
+Then, you can inline it as a [base64 data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), in an HTML file like this:
 
 ```html
 <img id="myfile"
