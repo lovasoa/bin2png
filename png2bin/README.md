@@ -17,6 +17,8 @@ Then, you can inline it as a [base64 data URL](https://developer.mozilla.org/en-
 In your code, you can then decode the image and get back the original file data:
 
 ```js
+import { png2bin } from "png2bin";
+
 var img = document.getElementById("myfile");
 var mydata = await png2bin(img);
 // mydata is an Uint8Array with the contents of the original file
