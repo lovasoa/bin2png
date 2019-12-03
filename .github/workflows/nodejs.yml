@@ -1,0 +1,31 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: bin2png test
+      run: |
+        cd bin2png
+        npm ci
+        npm test
+    - name: png2bin test
+      run: |
+        cd png2bin
+        npm ci
+        npm test
+      env:
+        CI: true
