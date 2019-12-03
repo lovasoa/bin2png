@@ -58,7 +58,7 @@ Then use the `png2bin` function from the package to decode the image:
     src="data:image/png;base64,..." />
 ```
 
-#### In you JavaScript
+#### In your JavaScript
 ```js
 import { png2bin } from "png2bin";
 const img = document.getElementById("myfile");
