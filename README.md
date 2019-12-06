@@ -9,6 +9,7 @@ Here, we propose a better alternative: package the binary data as an inline PNG 
 
 [![CI status](https://github.com/lovasoa/bin2png/workflows/Node%20CI/badge.svg)](https://github.com/lovasoa/bin2png/actions)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7f568d67-7de0-45c8-b308-f6f84261f884/deploy-status)](https://app.netlify.com/sites/bin2png-example/deploys)
+[![png2bin minified bundle size](https://img.shields.io/bundlephobia/minzip/png2bin)](https://bundlephobia.com/result?p=png2bin)
 
 ## How to use
 
