@@ -10,8 +10,8 @@
   "devDependencies": {
     "bin2png": "file:../bin2png",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-inliner": "^1.0.10",
-    "posthtml": "^0.12.0"
+    "parcel-plugin-inliner": "^1.0.16",
+    "posthtml": "^0.12.3"
   },
   "scripts": {
     "dev": "parcel index.html",
@@ -29,5 +29,8 @@
   "homepage": "https://github.com/lovasoa/bin2png#readme",
   "browserslist": [
     ">5%"
-  ]
+  ],
+  "resolutions": {
+    "node-forge": "0.10.0"
+  }
 }
