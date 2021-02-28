@@ -1,13 +1,13 @@
 /**
  * Decodes an image encoded with png2bin
- * 
+ *
  * @param {HTMLImageElement} img An image that has been encoded with png2bin
  * @returns {Uint8Array} decoded file
  */
-async function png2bin(img) {
-    var document = getDocument(img);
+async function png2bin(imgEl) {
+    var document = getDocument(imgEl);
     var canvas = document.createElement("canvas");
-    var img = await imgLoad(img);
+    var img = await imgLoad(imgEl);
     canvas.width = img.width;
     canvas.height = img.height;
     var ctx = canvas.getContext("2d");
@@ -33,7 +33,7 @@ function imgLoad(img) {
 
 /**
  * Returns the document element a node belongs to
- * @param {HTMLElement} domNode 
+ * @param {HTMLElement} domNode
  * @returns {Document}
  */
 function getDocument(domNode) {
