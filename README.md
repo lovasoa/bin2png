@@ -67,3 +67,10 @@ const img = document.getElementById("myfile");
 const mydata = await png2bin(img);
 // mydata is now an Uint8Array with the contents of the original file
 ```
+
+## Compatibility
+
+Some browser privacy settings alter canvas pixels or prevent reading data from canvases altogether. 
+This is the case of the Tor browser and Brave when anti-tracking protections are activated.
+This will prevent png2bin from working in these browsers.
+For more information, see [brave/brave-browser#14421](https://github.com/brave/brave-browser/issues/14421).
