@@ -20,9 +20,10 @@ async function main(argv) {
         process.stderr.write("Usage: bin2png binary-file png-file\n");
         process.exit(1);
     }
-    console.log(`Converting ${binFileName} to ${pngFileName}`);
-    var encoded = await encode_file(argv[2], argv[3])
-    var ratio = (encoded.length - binFile.length) / binFile.length;
+    console.log(`Converting ${argv[2]} to ${argv[3]}`);
+    var original = fs.stat(argv[2]);
+    var encoded = await encode_file(argv[2], argv[3]);
+    var ratio = (encoded.length - (await original).size) / (await original).size;
     console.log(`Success. File size difference: ${(100 * ratio).toFixed(0)}%`);
 }
 
