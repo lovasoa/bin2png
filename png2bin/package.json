@@ -27,6 +27,6 @@
   "homepage": "https://github.com/lovasoa/bin2png#readme",
   "devDependencies": {
     "canvas": "^2.6.1",
-    "jsdom": "^15.2.1"
+    "jsdom": "^16.5.0"
   }
 }
